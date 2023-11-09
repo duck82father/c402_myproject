@@ -8,7 +8,6 @@ from datetime import datetime
 
 bp = Blueprint('question', __name__, url_prefix='/question')
 
-
 @bp.route('/list/')
 def _list():
     question_list = Question.query.order_by(Question.create_date.desc())
