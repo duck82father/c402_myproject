@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy # SQLAlchemy (파이썬 ORM 라이브러리)
 
 import config
 

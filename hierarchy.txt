@@ -1,0 +1,35 @@
+├── pybo/
+│      ├─ __init__.py   / 애플리케이션 팩토리 (create_app)
+│      │
+│      ├─ models.py     / 모델 기반 데이터 베이스 처리 (모델 클래스 정의)
+│      │
+│      ├─ forms.py      / 웹 브라우저에서 서버로 전동된 폼 처리 (폼 클래스 정의 / WTForms)
+│      │
+│      ├─ views/        / 화면 구성 (main_views, question_views.py, answer_views.py)
+│      │   │
+│      │   ├─ main_views.py
+│      │   │
+│      │   ├─ question_views.py
+│      │   │
+│      │   └─ answer_views.py
+│      │
+│      ├─ static/       / CSS, 자바스크립트, 이미지 파일을 저장
+│      │   └─ style.css
+│      │
+│      └─ templates/    / HTML 파일을 저장
+│          │
+│          ├─ question_list.html
+│          │
+│          ├─ question_detail.html
+│          │
+│          └─ index.html
+│ 
+├── migrations/         / Flask-Migrate 라이브러리 (파이썬 모델을 이용해 테이블 생성, 컬럼 추가 등의 작업 진행)
+│ 
+└── config.py           / 파이보 프로젝트를 설정 (파이보 프로젝트의 환경변수, 데이터베이스 등)
+
+//
+
+Blueprint()
+- @app.route()를 체계적으로 관리
+- URL과 함수의 매핑을 관리하기 위해 사용하는 도구(클래스)

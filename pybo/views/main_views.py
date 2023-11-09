@@ -2,6 +2,7 @@ from flask import Blueprint, url_for
 from werkzeug.utils import redirect
 
 bp = Blueprint('main', __name__, url_prefix='/')
+# Blueprint(별칭, 인수("main_views"), '@bp.route()' 앞에 붙는 접두어 url)
 
 
 @bp.route('/hello')
