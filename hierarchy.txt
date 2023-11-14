@@ -5,7 +5,11 @@
 │      │
 │      ├─ forms.py      / 웹 브라우저에서 서버로 전동된 폼 처리 (폼 클래스 정의 / WTForms)
 │      │
+│      ├─ filter.py     / 
+│      │
 │      ├─ views/        / 화면 구성 (main_views, question_views.py, answer_views.py)
+│      │   │
+│      │   ├─ auth_views.py
 │      │   │
 │      │   ├─ main_views.py
 │      │   │
