@@ -13,7 +13,8 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 def signup():
     form = UserCreateForm()
     if request.method == 'POST' and form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()    # first() : 쿼리 결과에서 가장 첫 번째 행만 반환하는 함수
+        # db와 form에 입력된 user정보를 비교하여 있으면 user정보를, 일치하지 않으면 None을 반환
+        user = User.query.filter_by(username=form.username.data).first()        
         if not user:
             user = User(username=form.username.data,
                         password=generate_password_hash(form.password1.data),   # hash : 복호화가 불가능한 단방향 암호화
