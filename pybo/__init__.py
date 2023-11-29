@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy # SQLAlchemy (파이썬 ORM 라이브러리)
+from flaskext.markdown import Markdown
+
 import config
 from sqlalchemy import MetaData
 
@@ -36,5 +38,8 @@ def create_app():
     # 필터
     from .filter import format_datetime
     app.jinja_env.filters['datetime'] = format_datetime
+
+    # markdown
+    Markdown(app, extensions=['nl2br', 'fenced_code'])
 
     return app
